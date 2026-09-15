@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+  <style>
+    h1{
+        font-size: 50px;
+        color: pink;
+    }
+  </style>
+<body>
+    <h1 ><i class="fa-regular fa-star"></i>TO-DO LIST <i class="fa-regular fa-star"></i></h1>
+    <input type="text" id="task"/>
+    <button onclick="addTask()">add</button>
+     <ul id="list"></ul>
+
+     <script>
+        let tasks =[];
+
+        function addTask(){
+          let text = document.getElementById("task").value;
+          tasks.push(text);
+
+          document.getElementById("list").innerHTML = "";
+           
+          for(let i=0; i < tasks.length;i++)
+          {
+            document.getElementById("list").innerHTML += "<li>" +
+            "<button onclick='deletetask(" + i + ")'>Delete</button> " +
+             tasks[i] +
+            "</li>"; 
+            document,getElementById("tasks").value= "";
+            
+          }
+        }
+
+        function deleteTasks(index) {
+            tasks.splice(index, 1);
+            document.getElementById("list").innerHTML = "";
+             for(let i=0; i < tasks.length;i++){
+          
+            document.getElementById("list").innerHTML += "<li>" + tasks[i] + "</li>" 
+            document,getElementById("tasks").value= "";
+            "<li>" +
+            "<button onclick='deletetask(" + i + ")'>Delete</button> " + 
+            tasks[i] +
+            "</li>";
+             }
+          }
+          
+     </script>
+</body>
+</html>

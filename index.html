@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="calculation">
+        <h1>CALCULATOR:</h1>
+        <input type="number" id="num1"><br>
+        <input type="number" id="num2"><br>
+
+        <button onclick="add()">addition</button>
+        <button onclick="sub()">subtraction</button>
+        <button onclick="div()">division</button>
+        <button onclick="multi()">multiplication</button>
+
+        <p id="showResult">Result: </p>
+      
+
+       
+    <h2>TO-DO LIST</h2>
+    <input type="text" id="task">
+
+    <button onclick="task()">add</button>
+
+    <p id="result">result:</p>
+
+
+    </div>
+   <script>
+    function add()
+    {
+    let n1 = parseInt(document.getElementById("num1").value);
+    let n2 = parseInt(document.getElementById("num2").value);
+        let res = n1 + n2;
+        document.getElementById("showResult").innerHTML = res;
+    }
+     function sub()
+    {
+    let n1 = parseInt(document.getElementById("num1").value);
+    let n2 = parseInt(document.getElementById("num2").value);
+        let res = n1 - n2;
+        document.getElementById("showResult").innerHTML = res;
+    }
+     function div()
+    {
+    let n1 = parseInt(document.getElementById("num1").value);
+    let n2 = parseInt(document.getElementById("num2").value);
+        let res = n1 / n2;
+        document.getElementById("showResult").innerHTML = res;
+    }
+     function multi()
+    {
+    let n1 = parseInt(document.getElementById("num1").value);
+    let n2 = parseInt(document.getElementById("num2").value);
+        let res = n1 * n2;
+        document.getElementById("showResult").innerHTML = res;
+    }
+
+    let student = {
+        id : 172,
+        name : "esha",
+        age : 18
+    }
+    console.log(student);
+    for(let key in student)
+    {
+        console.log(student[key]);
+    }
+
+
+    // switch case===============
+    let day = 5;
+    switch(day)
+    {
+        case 1:
+        console.log("monday");
+        break;
+        case 2:
+        console.log("tuesday");
+        break;
+        case 3:
+        console.log("wednesday");
+        break;
+        case 4:
+        console.log("thursday");
+        break;
+        case 5:
+        console.log("friday");
+        break;
+        case 6:
+        console.log("saturday");
+        break;
+        case 7:
+        console.log("sunday");
+        break;
+        default: console.log("ERROR")
+    }
+
+// TO DO LIST==========================================
+function task(){
+    let tasks = document.getElementById("tasks").push;
+
+    document.getElementById("result").innerHTML
+}
+
+
+
+
+   </script>
+    
+
+</body>
+</html>
